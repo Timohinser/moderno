@@ -5,7 +5,8 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    cssmin = require('gulp-cssmin');
+    cssmin = require('gulp-cssmin') 
+    
 
 gulp.task('sass', function(){
    return gulp.src('app/scss/**/*.scss')
@@ -33,7 +34,8 @@ gulp.task('style', function() {
 gulp.task('script', function() {
    return gulp.src([
       'node_modules/slick-carousel/slick/slick.js',
-      'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+      'node_modules/mixitup/dist/mixitup.js'
       ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())
