@@ -284,6 +284,7 @@
 
 .advantages__title {
    color: #fff;
+   margin-bottom: 80px;
 }
 
 .advantages__inner {
@@ -294,64 +295,243 @@
 .advantages__item {
    max-width: 370px;
    text-align: center;
-   padding: 0px 15px;   
-   &:hover {
-      .advantages__item-images {
-         color: $green;
-         background-color: $green;
-         g {
-            fill: #fff;
-         }
-      }
-      .advantages__item-title {
-         color: $green;
-      }
-
-   }
+   padding: 0px 15px;  
+    
    &-images {
       width: 114px;
       height: 114px;
       border-radius: 50%;
       display: flex;
       background-color: #fff;
+      color: #000;
       justify-content: center;
       align-items: center;
       margin: 0 auto 30px;
       transition: all .3s;
+      
+      
    }
    &-title {
       margin-bottom: 25px;
       font-size: 24px;
       color: #fff;
       @include f500;
-      transition: all .3s;
+      transition: all .3s; 
    }
    &-text {
       font-size: 15px;     
    }
-}
-
-.icosvg-1 {
-   svg{
-      width: 50px;
+   &:hover {       
+      .advantages__item-images {
+         // color:  #fff;
+         background-color: $green;                           
+      }
+      .advantages__item-title {
+         color: $green;         
+      }
+      .icon-lock, .icon-gift, .icon-heart-o {   
+         color: #fff;
+      }   
    }
 }
 
-.icon-gift {
-   font-size: 32px;
-   color: red;
- }
+.icon-lock, .icon-gift, .icon-heart-o {
+   transition: all .3s;
+   color: #000;
+   &::before {
+      font-family:'icomoon';
+   }
+}
+
+.icon-lock::before {     
+   font-size: 90px;
+}
  
-.icosvg-2 {
-   svg{
-      width: 70px;
+.icon-gift::before {
+   font-size: 90px;   
+}
+
+.icon-heart-o::before {     
+   font-size: 80px;
+}
+// ====section advantages end =============
+
+// ==============footer start==============
+.footer{
+   background-color: $bg;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 100px 0px 80px;
+   }   
+}
+
+.footer__col {
+   max-width: 270px;
+   width: 100%;
+   &-menu {
+      max-width: 220px;
+      width: 100%;      
+   }
+   &-title {
+      font-size: 22px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      position: relative;
+      &::after{
+         position: absolute;
+         content: '';
+         bottom: 0;
+         left: 2px;
+         width: 51px;
+         height: 3px;
+         background-color: $green;
+      }
+   }
+   &-text {
+      color: #b7c3c8;
+      margin-bottom: 30px;
    }
    
 }
 
-.icosvg-3 {
-   svg{
-      width: 86px;
+.footer__info {
+   margin-top: 18px;
+   @include f500;
+   color: #fff;
+   padding-left: 30px;
+   position: relative;
+   &::before {
+      content: '\f041';
+      font-family:'icomoon';
+      color: $green;
+      position: absolute;
+      left:0;
+      font-size: 18px;
    }
 }
-// ====section advantages end =============
+
+.footer__info-phone {
+   &::before {
+      content: '\f095';
+   }
+}
+
+.footer__col-list {
+   a {
+      color: #b7c3c8;
+      margin-bottom: 13px;
+      padding-left: 22px;
+      position: relative;
+      &::before {
+         content: '\f105';
+         position: absolute;
+         left: 0;
+         font-size: 18px;
+         color: $green;
+         font-family:'icomoon';
+      }
+   }
+}
+
+.footer__social-link {
+   margin-bottom: 33px;
+   li {
+      display: inline-block;
+      & + li {
+         margin-left: 7px;
+      }
+   }
+   a {
+      width: 28px;
+      height: 28px;
+      background-image: url(../images/content/css_sprites.png);      
+   }
+}
+
+.link-facebook {
+   background-position: 0px 0px;
+}
+.link-twitter {
+   background-position: -28px 0px;
+}
+.link-youtube {
+   background-position: -56px 0px;
+}
+.link-pinterest {
+   background-position: 0px -28px;
+}
+.link-linkedin {
+   background-position: -28px -28px;
+}
+
+.footer__form-title {
+   margin-bottom: 15px;
+   color: #fff;
+   font-size: 20px;
+}
+
+.footer__form {
+   position: relative;
+   &-input{
+      border: none;
+      background-color: #2f3c43;
+      display: block;
+      width: 100%;
+      height: 40px;
+      color: #fff;
+      font-size: 14px;
+      padding: 0px 60px 0px 15px;
+      &::placeholder {
+         color: #697378;
+      }
+   }
+   &-button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 45px;
+      height: 40px;
+      border: none;
+      background-color: $green;
+      cursor: pointer;
+      &::before {
+         content: '\f124';
+         color: #fff;
+         font-size: 20px;
+         font-family: 'icomoon';
+         position: absolute;
+         transform: translate(-50%, -50%);
+      }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer__copy {
+   border-top: 1px solid #2f3b41;
+}
+
+.footer__copy-text {
+   text-align: center;
+   color: #919699;
+   padding: 25px 0px;   
+}
+
+
+
+// ==============footer end================
