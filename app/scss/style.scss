@@ -27,8 +27,7 @@
 }
 
 .header__btn-login {
-   background-color: $green;
-   
+   background-color: $green;   
 }
 
 .header__btn-register {
@@ -37,8 +36,7 @@
 }
 
 .header__menu {
-   background-color: $bg;
-   
+   background-color: $bg;   
 }
 
 .menu {
@@ -111,6 +109,7 @@
          padding: 0;
          top: 18px;
          right: 20px;
+         cursor: pointer;
       }
    }
 }
@@ -240,9 +239,7 @@
          background-color: $red;
          color: #fff;
       }
-   }
-   
-   
+   }     
 }
 // ============== products end ============
 
@@ -295,8 +292,7 @@
 .advantages__item {
    max-width: 370px;
    text-align: center;
-   padding: 0px 15px;  
-    
+   padding: 0px 15px;     
    &-images {
       width: 114px;
       height: 114px;
@@ -307,9 +303,7 @@
       justify-content: center;
       align-items: center;
       margin: 0 auto 30px;
-      transition: all .3s;
-      
-      
+      transition: all .3s;      
    }
    &-title {
       margin-bottom: 25px;
@@ -356,6 +350,77 @@
 }
 // ====section advantages end =============
 
+// === section author start ===============
+.author {
+   width: 100%;
+   background-image: url(../images/content/Author-bg.jpg);
+   background-repeat: repeat-x;  
+   min-height: 751px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &__box {
+      max-width: 650px;
+      width: 100%;
+      min-height: 215px;
+      background-color: $green;
+      padding: 0 60px; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__title {
+      font-size: 30px;
+      line-height: 36px;
+      color: #fff;
+      max-width: 270px;      
+   }
+   &__link {
+      font-size: 18px;
+      color: $bg;
+      padding: 20px;
+      text-align: center;
+      max-width: 225px;
+      width: 100%;
+      background-color: #fff;
+   }
+}
+// === section author end== ===============
+
+// === section tutorial start =============
+.tutorial {  
+   padding: 60px 0 120px;
+   &__title {  
+      padding-bottom: 15px;    
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;   
+   }
+   &__item {
+      max-width: 370px;
+      width: 100%;
+   } 
+}
+
+.tutorial__item {
+   &-images{
+      min-height: 270px;
+      background-repeat: no-repeat; 
+      background-size: cover;  
+      background-position: center;   
+   }
+   &-title {
+      font-size: 24px;
+      color: $bg;
+      @include f700;
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 36px 10px 40px;
+   }
+}
+// === section tutorial end== =============
+
 // ==============footer start==============
 .footer{
    background-color: $bg;
@@ -394,8 +459,7 @@
    &-text {
       color: #b7c3c8;
       margin-bottom: 30px;
-   }
-   
+   }   
 }
 
 .footer__info {
@@ -509,19 +573,6 @@
    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer__copy {
    border-top: 1px solid #2f3b41;
 }
@@ -531,7 +582,4 @@
    color: #919699;
    padding: 25px 0px;   
 }
-
-
-
 // ==============footer end================
