@@ -8,6 +8,11 @@ html {
    box-sizing: inherit;
 }
 
+html,
+body {
+	height: 100%;
+}
+
 a {
    display: inline-block;
    text-decoration: none;
@@ -19,6 +24,24 @@ li {
    margin: 0;
    padding: 0;
    list-style: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.page-content {
+   background-color: $grey;
 }
 
 body {
@@ -68,8 +91,38 @@ body {
       content: '\f105';
       font-family: 'icomoon';
       position: absolute;
-      left:20px;
+      left:0px;
       font-size: 14px;
       color: $green;
+      transition: all .3s;
    }
+}
+
+.breadcrumbs {
+   &__inner {
+      padding: 45px 0px 40px;
+   }
+   &__list {
+      li {
+         display: inline-block;
+         position: relative;     
+         & + li {
+            padding-left: 20px;
+            &::before {
+               content: '-';
+               position: absolute;
+               left: 8px;
+               color: $green;
+            }
+         }
+         &:last-child {
+            a, span {
+               color: $bg; 
+            }
+         }
+      }
+      a {
+         color: #b0bec5;
+      }
+   }   
 }
