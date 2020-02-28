@@ -2,6 +2,10 @@
 @import 'global';
 @import 'fonts';
 
+.header {
+   background-color: #fff;
+}
+
 .header__top-inner {
    display: flex;
    justify-content: space-between;
@@ -88,6 +92,7 @@
    display: flex;
    align-items: center;
    position: relative;
+   background-color: #fff;
 }
 
 .header__circle {
@@ -248,6 +253,9 @@
    display: flex;
    align-items: center;   
    padding: 28px 0;
+   &.header__btn-login--off {
+      display: none;
+   }
    &:hover {
       .basket__menu, .message__menu, .notification__menu{
          border: 1px solid  #cccccc;   
@@ -406,6 +414,11 @@
    &::before {
    content: '\f0a2';
    }   
+}
+
+.header__btn-menu,
+.menu__btn {
+   display:none;
 }
 
 // ================= end header ============
@@ -1363,3 +1376,10 @@
    }
 } 
 // ============== product-page end ============
+
+
+
+
+
+
+@import 'media';
