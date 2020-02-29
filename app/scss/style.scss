@@ -422,6 +422,112 @@
 
 // ================= end header ============
 
+// ================ modal login start ======
+#modal {
+   background-color: $green;
+   max-width: 730px;
+   width: 100%;
+   padding-top: 90px;
+   padding-bottom: 100px;
+}
+
+.login__title {
+   text-align: center;
+   font-size: 48px;
+   margin-bottom: 40px;
+   text-transform: uppercase;
+   color: #fff;
+   @include f700;
+}
+
+.login__wrapper {
+   form {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;      
+      label {
+         position: relative;
+         display: block;         
+         &::before {
+            position: absolute;
+            font-family: 'icomoon';
+            left: 18px;
+            top: 9px;
+            color: #fff;
+            font-size: 14px;}
+      }
+      .login__label-name{
+         &::before {
+            content: "\f007";
+         }        
+      }
+      .login__label-pass {
+         &::before {
+            content: "\f023";
+         }         
+      }
+      input {
+         height: 43px;
+         margin-bottom: 8px;
+         display: block;
+         width: 100%;
+         border: none;
+         background-color: #76ae36;
+         color: #fff;
+         font-size: 14px;
+         padding-left: 40px;
+         padding-right: 20px;
+         &::placeholder {
+            color: #fff;
+            font-size: 14px;
+         }
+      }
+      button {
+         width: 140px;         
+         padding: 18px 0;
+         margin-top: 19px;
+         background-color: #fff;
+         text-transform: uppercase;
+         color: #000;
+         font-size: 14px;
+         @include f700;
+         text-align: center;
+         border: none;
+         box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+         margin-right: 10px;
+         cursor: pointer;
+      }
+      .create-account__link{
+         width: 245px;         
+         padding: 12px 0 16px 65px;
+         background-color: #76ae36;
+         color: #fff;
+         font-size: 18px;
+         border: none;
+         position: relative;  
+         &::before {
+            content: "\f044";
+            font-family: 'icomoon';
+            position: absolute;
+            top: 12px;
+            left: 35px;  
+         }       
+      }
+      .lost-pass__link{
+         display: block;
+         margin-top: 20px;
+         color: #fff;
+         font-size: 18px;
+      }
+      
+   }   
+}
+.fancybox-button svg {
+   color: #fff;
+}
+
+// ================ modal login end ========
+
 // ================= search start ==========
 
 .search {   
@@ -1801,12 +1907,108 @@
       @include f500;
    }
 }
-
-
 // =========product-one aside end ============
-
-
 // ============== product-one end ============
+
+// ============= page 404 start ============
+.page-404__wrapper, .about__wrapper{
+   border: 1px solid #dcdcdc;
+   background-color: #fff;
+   margin-bottom: 150px;
+}
+.page-404__head, .about__head {
+   font-size: 24px;
+   color: #444444;
+   @include f500;
+   border-bottom: 1px solid #dcdcdc;
+   padding: 23px 30px 27px;
+}
+
+.page-404__inner {
+   text-align: center;
+   background-color: $green;
+   color: #fff;
+}
+
+.page-404__404 {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 300px;
+   line-height: 300px;
+   font-weight: 800; 
+   max-width: 710px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 70px 0 20px;
+   text-align: left;
+   position: relative;
+   &::after {
+      content: '';
+      background-image: url(../images/404.png);
+      width: 157px;
+      height: 301px;
+      position: absolute;
+      margin-left: 20px;      
+   }   
+}
+
+.page-404__title { 
+   font-family: 'Open Sans', sans-serif;
+   font-size: 30px;
+   line-height: 30px;
+   letter-spacing: 7px;
+   margin-bottom: 30px;
+}
+
+.page-404__text {
+   font-family: 'Raleway', serif ;
+   font-weight: 500;
+   font-size: 18px;
+   max-width: 540px;
+   margin: 0 auto;
+   margin-bottom: 55px;
+}
+
+.page-404__link {
+   max-width: 210px;
+   width: 100%;
+   font-family: 'Raleway', serif;
+   font-size: 14px;
+   text-transform: uppercase;
+   padding: 20px 0;
+   border: 2px solid #fff;
+   color: #fff;
+   border-radius: 4px;
+   margin-bottom: 100px;
+   transition: all .3s;
+   &:hover {
+      background-color: #fff;
+      color: $green;
+      border-color: $green;
+   }
+}
+// ============= page 404 end ==============
+
+// ============= page about start ==========
+.about__inner {
+   padding: 40px 50px 0 50px;
+   
+}
+.about__box {
+   margin-bottom: 50px;
+   .about__title {
+      color: #444444;
+      font-size: 20px;
+      @include f700;
+      margin: 0;
+   }   
+   .about__text {
+      color: #707070;
+      margin: 0;
+      margin-top: 20px;     
+      text-align: left;
+   }   
+}
+// ============= page about end ============
 
 
 
