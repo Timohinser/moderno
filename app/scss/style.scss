@@ -2138,6 +2138,120 @@
 }
 // ============= contacts end ==============
 
+// ============= settings start=============
+.settings {
+   
+}
+
+.product-one__tabs.settings__tabs {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 150px;   
+   .tabs {
+      display: block;
+      max-width: 270px;
+      width: 100%;
+      margin-right: 30px;
+      border:none;
+      border: 1px solid #d7d7d7;
+      border-top: none;
+      text-align: left;
+      background-color: #fff;
+      height: 100%;
+      span {
+         display: block;
+         width: 100%;
+         border-left:none;         
+         border-top: 1px solid #d7d7d7;
+         padding: 17px 17px 17px 50px; 
+         @include f500;
+         font-size: 14px;
+         color: #707070;        
+         &.angle-right::before {            
+            left: 23px;
+            color: #444444;
+         }
+         &.active {            
+            color: #37474f;
+            &.angle-right::before {            
+               color: $green;
+            }
+         }
+      }
+   }
+   .tab_content {
+      display: block;
+      width: 100%;
+      border-top: 1px solid #d7d7d7;
+      padding: 0;
+   }
+   .page-box-title {
+      border-bottom: 1px solid #d7d7d7;
+      padding: 18px 34px;
+      font-size: 24px;
+      color: $bg;
+      @include f500;
+
+   }
+   .page-box__content {
+      padding: 35px 38px 80px;
+    
+      button {
+         margin-left: 252px;
+         padding: 13px 5px 15px;
+         width: 110px;
+         border: 1px solid transparent;
+         background-color: $green;
+         color: #fff;  
+         @include f500; 
+         transition: all .3s;
+         &:hover {
+            background-color: #fff;
+            color: $green;
+            border-color: $green;
+         }     
+      }
+   }
+   .setings__line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      label {         
+         width: 250px; 
+         color:#444444;
+         align-items: center;
+      }
+      input, select {
+         max-width: 540px;
+         width: 100%;
+         height: 40px;
+         color: #000;
+         border: 1px solid #d7d7d7;
+         background-color: #f9f9f9;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+      select {
+         padding-right: 40px;
+         color: #707070;
+         font-size: 14px;        
+      }
+   }
+}
+
+
+
+
+
+.settings__tabs {
+
+}
+
+
+
+
+// ============= settings end  =============
+
 
 
 
