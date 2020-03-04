@@ -43,6 +43,9 @@ $(function(){
    $('.header__btn-menu').on('click', function(){
       $('.header__box').toggleClass('active');
    })
+
+   $('input[type="file"], select').styler();
+
    
    $('.product-one__tabs .tab, .settings__tabs .tab').on('click', function(event) {
       var id = $(this).attr('data-id');
@@ -51,7 +54,9 @@ $(function(){
          $(this).addClass('active');
          $('#'+id).addClass('active-tab').fadeIn();
          return false;
-      });
+   });
+
+   
 
 
    if($(".products__inner-box").length){
