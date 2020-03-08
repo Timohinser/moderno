@@ -23,6 +23,7 @@ $orange: #ef6c00;
 @mixin select {
    .jq-selectbox {
       width: 100%;
+      // display: block;
    }
    .jq-selectbox__select {
       height: 40px;
